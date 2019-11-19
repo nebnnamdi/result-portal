@@ -33,7 +33,7 @@
                         $_SESSION['uname'] = $dbuname;
                         header("Location: ../home.php?=$uid&");
                         exit();
-                        }
+                    }
                 }
             } else {
                 header("Location: ../signin.php?=invalid user&");

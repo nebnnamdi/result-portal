@@ -1,0 +1,321 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+.mySlide {
+    display: none;
+}
+
+.slideSect {
+    width: 80%;
+    height: 50%;
+    margin: 1% auto;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    background-image: url("../images/campus.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.header a:hover {
+    background-color:  rgb(38, 101, 131);
+    color: white;
+}
+
+.header img {
+    margin-right: 72%;
+    margin-top: 5px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .content {
+      display: flex;
+      flex-flow: row wrap;
+      padding: 0px 5%;
+      font-family: 'Merriweather', serif;
+      font-size: 18px;
+  }
+
+  .content-one {
+      width: 70%;
+      padding: 2%;
+  }
+
+  .content-one:hover {    
+      box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+  h1 {
+      margin-bottom: 2%;
+      font-style: italic;
+      font-family: 'ZCOOL XiaoWei', serif;
+  }
+
+  b#bold {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 50px;
+}
+
+  .hr-one {
+      border-bottom: 2px solid rgb(104, 96, 96);
+      margin-bottom: 1%;
+  }
+
+  #p-one {
+    margin-top: 5%;
+}
+
+.content-two {
+    display: flex;
+    flex-flow: column;
+    background-color: rgb(187, 187, 187);
+    width: 25%;
+    text-align: justify;
+    margin-left: 1%;
+    background-image: linear-gradient(to right, white, rgb(141, 141, 141));
+}
+
+#box-one {
+    padding: 10%;
+    font-size: 14px;
+    color: white;
+    text-align: right;
+}
+
+#box-one h3 {
+    text-shadow: 1px 1px black;
+    color: rgba(255, 217, 0, 0.884);
+}
+
+#box-one h2 {
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+#box-one a {
+    text-decoration: none;
+    color: white;
+}
+
+#box-one a:hover {
+    color: rgba(255, 217, 0, 0.884);
+}
+
+#boxOne {
+    margin-top: 5%;
+    border-bottom: 1px solid white;
+}
+
+#box-one h3 {
+    text-shadow: 1px 1px black;
+    color: rgba(255, 217, 0, 0.884);
+    font-size: 20px;
+}
+
+.hr-two {
+    margin-bottom: 1%;
+}
+
+#box-two {
+    padding: 10%;
+    font-size: 14px;
+    color: rgba(131, 17, 17, 0.884);
+    text-align: right;
+}
+
+#box-two div {
+    margin-top: 5%;
+}
+
+#box-two h2 {
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+#box-two h3 {
+    text-shadow: 1px 1px black;
+    color: rgba(255, 217, 0, 0.884);
+    font-size: 20px;
+}
+
+#box-two i {
+    font-size: 18px;
+}
+
+#pg {
+    font-size: 20px;
+}
+
+
+.footer {
+    background-color: white;
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+/** css for login page**/
+
+.login[type=text] {
+    padding: 1%;
+    margin-bottom: 1%;
+    width: 40%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.login[type=password] {
+    padding: 1%;
+    margin-bottom: 1%;
+    width: 40%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.login[type=text]:focus {
+    background-color: rgb(200, 220, 255);
+    color: black;
+    border-radius: 5px;
+}
+
+.login[type=password]:focus {
+    background-color: rgb(200, 220, 255);
+    color: black;
+    border-radius: 5px;
+}
+
+.button{
+    padding: 1%;
+    width: 15%;
+    border: none;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    background-color: rgb(20, 20, 56);
+    color: white;
+}
+
+.button:hover {
+    background-color: rgb(65, 3, 3);
+    color: white;
+}
+
+c {
+    font-size: 14px;
+}
+
+/* Registration portal page*/
+
+.reg[type=text] {
+    padding: 1%;
+    margin-bottom: 1%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.reg[type=password] {
+    padding: 1%;
+    margin-bottom: 1%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.reg[type=text]:focus {
+    background-color: rgb(200, 220, 255);
+    color: black;
+    border-radius: 5px;
+}
+
+.reg[type=password]:focus {
+    background-color: rgb(200, 220, 255);
+    color: black;
+    border-radius: 5px;
+}
+
+.reg-button{
+    padding: 1%;
+    width: 15%;
+    border: none;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    background-color: rgb(20, 20, 56);
+    color: white;
+}
+
+.reg-button:hover {
+    background-color: rgb(65, 3, 3);
+    color: white;
+}
+
+c {
+    font-size: 14px;
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+    
+    .header {
+        flex-direction: column;
+    }
+
+    .top {
+        background-image: none;
+        height: 5%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content-one {
+        width: 100%;
+    }
+  
+    .content-two {
+        width: 100%;
+    }
+
+    #pg {
+        margin-bottom: 10%;
+        border-bottom: 2px solid rgb(231, 229, 229);
+    }
+}

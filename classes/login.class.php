@@ -28,16 +28,16 @@ session_start();
             //check and login user
             if ($stmt->num_rows > 0) {
                 while ($stmt->fetch()) {
-                if (password_verify($this->pwd, $dbpwd) != true) {
-                    header("Location: ../signin.php?=invalid user");
-                    exit();
-                } elseif (password_verify($this->pwd, $dbpwd) == true) {
-                    $_SESSION['uid'] = $uid;
-                    $_SESSION['uname'] = $dbuname;
-                    $_SESSION['fname'] = $dbfname;
-                    $urlId = password_hash($uid, PASSWORD_DEFAULT);
-                    header("Location: ../home.php?=success/dashboard/user/$urlId&/home");
-                    exit();
+                    if (password_verify($this->pwd, $dbpwd) != true) {
+                        header("Location: ../signin.php?=invalid user");
+                        exit();
+                        exit();
+                    } elseif (password_verify($this->pwd, $dbpwd) == true) {
+                        session_start();
+                        $_SESSION['uid'] = $uid;
+                        $_SESSION['uname'] = $dbuname;
+                        header("Location: ../home.php?=$uid&");
+                        exit();
                     }
                 }
             } else {
@@ -46,26 +46,3 @@ session_start();
             }
         }
     }
-
-    /* 
-
-    $sql = "SELECT * FROM users where uname='$this->uname'";
-            $result = $newConn->query($sql);
-            $resultCheck = $result->num_rows; 
-
-
-    if($resultCheck < 1){
-                header("Location: ../signin.php?signin=invalid");
-                exit();
-            } else {
-                if ($data = $result->fetch_assoc()) {
-                    if($this->pwd != $data['pwd']){
-                        header("Location: ../signin.php?signin=invalid_user");
-                        exit();
-                    } elseif ($this->pwd == $data['pwd']) {
-                        echo 'Welcome, '.$data['fname'];
-                        exit();
-                    } 
-                } 
-            }
-    */

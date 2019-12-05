@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="script" href="js/script.js">
-    <title>School Result Checker</title>
+    <title>School Portal</title>
 
 </head>
 
@@ -23,10 +23,26 @@
     <!-- header and nav-->
 
     <div class="header" id="myHeader">
-        <img src="images/logo.jpg" width="5%" alt="logo">
-        <a href="index.php"><i class="fas fa-home"></i> HOME</a>
-        <a href="signin.php"><i class="fas fa-sign-in-alt"></i> LOGIN</a>
-        <a href="registration.php"><i class="fas fa-envelope-open"></i> SIGN UP</a>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="logo">
+        </div>
+        
+        <?php
+            if (!isset($_SESSION['uid'])) {
+                echo '<div class="menu"><a href="index.php"><i class="fas fa-home"></i> HOME</a>
+                <a href="signin.php"><i class="fas fa-sign-in-alt"></i> LOGIN</a>
+                <a href="registration.php"><i class="fas fa-envelope-open"></i> SIGN UP</a></div>';
+            } else {
+                echo '<div class="menu">
+                    <form action="includes/logout.php" method="POST">
+                        <button type="submit" name="submit">
+                         SIGN OUT <i class="fas fa-sign-out-alt"> </i>
+                        </button>
+                    </form>
+                    </div>';
+            }
+        ?>
+        
     </div>
     
     <?php
